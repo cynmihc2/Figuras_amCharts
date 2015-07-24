@@ -20,6 +20,7 @@ Router.map(function() {
 	this.route('distribuirDatos');
     this.route('visualizarDatos');
     this.route('barChart');
+    this.route('barChart2');
     this.route('pieChart');
     this.route('mostrarDatosUsuario');
 	/*

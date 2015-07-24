@@ -13,7 +13,7 @@ Template.barChart.rendered = function() {
          "adjustBorderColor":false,
           "horizontalPadding":15,
           "verticalPadding":10,
-          "color":"#ffffff"
+          "color":"#eeeeee"
             },
 
         "dataProvider": [{

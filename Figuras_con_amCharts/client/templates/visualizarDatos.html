@@ -3,25 +3,20 @@
   <h1>Graficos</h1>
 
   <div class="btns-group-vertical">
-      <a href="{{pathFor 'barChart'}}">Grafico de Barras</a>
-      <a href="{{pathFor 'pieChart'}}">Grafico de Torta</a>
+      <a href="{{pathFor 'barChart'}}">  Grafico de Barras</a>
+      <a href="{{pathFor 'pieChart'}}">  Grafico de Torta</a>
+      <a href="{{pathFor 'barChart2'}}">  Grafico de barras agrupadas</a>
   </div>
 </template>
 
 <template name="barChart">
-    
     <a href="{{pathFor 'visualizarDatos'}}">Volver</a>
     <div id="divChart"></div>
-
 </template>
 
-<template name="pie">
-   <h1>Figuras en la base de datos</h1>
-   <div class="btns-group-vertical">
-      <svg>
-        
-      </svg>
-  </div>
+<template name="barChart2">
+   <a href="{{pathFor 'visualizarDatos'}}">Volver</a>
+   <div id="divChart"></div>
 </template>
 
 <template name="pieChart">
