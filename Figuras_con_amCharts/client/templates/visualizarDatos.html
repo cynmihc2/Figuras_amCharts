@@ -1,0 +1,25 @@
+<template name="visualizarDatos">
+  
+  <h1>Graficos</h1>
+
+  <div class="btns-group-vertical">
+      <a href="{{pathFor 'barChart'}}">  Grafico de Barras</a>
+      <a href="{{pathFor 'pieChart'}}">  Grafico de Torta</a>
+      <a href="{{pathFor 'barChart2'}}">  Grafico de barras agrupadas</a>
+  </div>
+</template>
+
+<template name="barChart">
+    <a href="{{pathFor 'visualizarDatos'}}">Volver</a>
+    <div id="divChart"></div>
+</template>
+
+<template name="barChart2">
+   <a href="{{pathFor 'visualizarDatos'}}">Volver</a>
+   <div id="divChart"></div>
+</template>
+
+<template name="pieChart">
+  <a href="{{pathFor 'visualizarDatos'}}">Volver</a>
+  <div id="divChart"></div>
+</template>
