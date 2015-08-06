@@ -169,6 +169,10 @@ Template.elCanvas.events({
     //console.log("privadaOcultar: "+!this.private);
     Meteor.call("compartirFig", shapeId, !this.private);
     //Meteor.call("compartirFig", shapeId, true);
+  },
+
+  "click .renderizar":  function(){
+    Template.elCanvas.rendered();
   }
 
 });

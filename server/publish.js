@@ -14,3 +14,24 @@ Meteor.publish("figuras", function(){
       ]
     });
 });
+
+Meteor.publish("resultados1", function(){
+	return Resultados1.find({});
+});
+
+Meteor.publish("resultados2", function(){
+	return Resultados2.find({});
+});
+
+Meteor.publish("resultados", function(){
+  return Resultados.find({});
+});
+
+
+//Users NO FUNCIONA
+/*
+Meteor.publish("users", function(){
+  return Usuarios.find({});
+});
+*/
+

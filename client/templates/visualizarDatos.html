@@ -2,21 +2,39 @@
   
   <h1>Graficos</h1>
 
+  <!--
+  <div id = "consultas">
+    <input>
+
+  </div>
+
+  <div id = "mostrarConsultas">
+  </div>
+  -->
+
+
   <div class="btns-group-vertical">
       <a href="{{pathFor 'barChart'}}">  Grafico de Barras</a>
       <a href="{{pathFor 'pieChart'}}">  Grafico de Torta</a>
       <a href="{{pathFor 'barChart2'}}">  Grafico de barras agrupadas</a>
+      <!-- <a href="{{pathFor 'barChart3'}}">  Grafico de barras agrupadas</a> -->
   </div>
 </template>
 
 <template name="barChart">
     <a href="{{pathFor 'visualizarDatos'}}">Volver</a>
     <div id="divChart"></div>
+     {{traerConsultaUno}}}
+     <!-- {{traerConsultaDos}} -->
 </template>
 
 <template name="barChart2">
+<!-- <template name="barChart3"> -->
    <a href="{{pathFor 'visualizarDatos'}}">Volver</a>
    <div id="divChart"></div>
+   <!-- AGREGAR UN BOTON; PARA PODER ORDENAR LA INTERFAZ DE  CONSULTAS -->
+   <input type="button" class="btn consultar" value="Consultar">
+   <input type="button" class="btn remover" value="Remover">
 </template>
 
 <template name="pieChart">

@@ -1,3 +1,6 @@
+Meteor.subscribe("resultados1");
+Meteor.subscribe("resultados2");
+
 Template.barChart.rendered = function() {
   var chart = AmCharts.makeChart("divChart", {
         "type": "serial",
@@ -90,3 +93,58 @@ Template.barChart.rendered = function() {
   // store the chart in the data context in case you need it later
   //this.data.chart = chart;
 };
+
+
+Template.barChart.helpers({
+  traerConsultaUno: function(){
+    var arregloUno = Resultados1.find({}).fetch();
+    var lengthArrayUno = arregloUno.length;
+    var arrayTres = []; 
+    var arrayObjetos = [];  
+    var i;       
+    for(i=0; i<lengthArrayUno; i++){
+      var lengthArrayDos = arregloUno[i].arreglo.length;
+      arrayTres[i] = arregloUno[i]._id;
+      var arrayCuatro = [];
+      //OBTIENE EL ARRAY INTERNO
+      for(j=0; j<lengthArrayDos; j++){
+        arrayCuatro[j] = arregloUno[i].arreglo[j];
+      }
+
+      //HACE CONTEO DE ARRAY INTERNO
+      var objetico2 = {}
+      for(k=0; k<arrayCuatro.length; k++){
+        if(objetico2[arrayCuatro[k]]){
+          objetico2[arrayCuatro[k]] = objetico2[arrayCuatro[k]] + 1;  
+        }
+        else{
+          objetico2[arrayCuatro[k]] = 1;  
+        }
+      }
+      // INSERTA CONTEO DE ARRAY DE OBJETOS
+
+      arrayObjetos.push(objetico2);
+
+    }
+
+    
+    
+    //CREACION DE UN OBJETO
+
+    var myObject = {
+      valorUno : "nohe",
+      valorDos : 2
+    }
+    
+    var objetico = {}
+    objetico["circle"]=78;
+    objetico["circle"]=objetico["circle"]+1;
+
+    var arregloDos = Resultados2.find({}).fetch();
+  }, 
+  /*
+  traerConsultaDos: function(){
+    var arregloDos = Resultados2.find({}).fetch();
+  }
+  */
+})
